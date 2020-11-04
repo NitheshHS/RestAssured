@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.GitApi.test.GetTocken">
+      <class name="com.Reqres.test.GetAllUser">
         <methods>
-          <include name="getTockenTest"/>
+          <include name="getAlluserTest"/>
         </methods>
-      </class> <!-- com.GitApi.test.GetTocken -->
+      </class> <!-- com.Reqres.test.GetAllUser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

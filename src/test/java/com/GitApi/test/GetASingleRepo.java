@@ -1,10 +1,11 @@
 package com.GitApi.test;
 
-import org.testng.annotations.Test;
-
-import io.restassured.response.Response;
-
 import static io.restassured.RestAssured.*;
+
+import static org.hamcrest.Matchers.*;
+
+import org.testng.annotations.Test;
+import io.restassured.response.Response;
 
 public class GetASingleRepo {
 	
@@ -19,7 +20,11 @@ public class GetASingleRepo {
 				.basic("NitheshHS", "nithesh@1998")
 		.when()
 			.get("/repos/{owner}/{repo}");
-		
+		res.then()
+			.assertThat().body("owner.login",equalTo("NitheshHS"))
+			.assertThat().body("owner.url",containsString("https://api.github.com"))
+			.log().all()
+			;
 		
 		String username = res.jsonPath().get("owner.login");
 		System.out.println(username);

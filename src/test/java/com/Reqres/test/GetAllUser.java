@@ -1,21 +1,20 @@
 package com.Reqres.test;
 
-import static org.hamcrest.Matchers.*;
+import static io.restassured.RestAssured.when;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.lessThan;
 
 import java.util.concurrent.TimeUnit;
 
 import org.testng.annotations.Test;
 
-import io.restassured.http.ContentType;
+import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.response.Response;
-
-import static io.restassured.RestAssured.*;
 
 public class GetAllUser {
 	
 	@Test
 	public void getAlluserTest() {
-		
 		
 		Response res = when()
 			.get("https://reqres.in/api/users?page=2");
@@ -28,9 +27,7 @@ public class GetAllUser {
 			.assertThat().header("Content-Type", equalTo("application/json; charset=utf-8"))
 			.and()
 			.log().all();
-		
-		
-		
+	
 	}
 
 }

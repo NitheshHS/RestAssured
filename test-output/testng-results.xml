@@ -2,16 +2,35 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="8647" started-at="2020-11-04T12:41:41 IST" finished-at="2020-11-04T12:41:49 IST">
+  <suite name="Default suite" duration-ms="1569" started-at="2020-11-04T20:19:51 IST" finished-at="2020-11-04T20:19:53 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="8647" started-at="2020-11-04T12:41:41 IST" finished-at="2020-11-04T12:41:49 IST">
-      <class name="com.Reqres.test.GetAllUser">
-        <test-method status="PASS" signature="getAlluserTest()[pri:0, instance:com.Reqres.test.GetAllUser@396f6598]" name="getAlluserTest" duration-ms="8464" started-at="2020-11-04T12:41:41 IST" finished-at="2020-11-04T12:41:49 IST">
+    <test name="Default test" duration-ms="1569" started-at="2020-11-04T20:19:51 IST" finished-at="2020-11-04T20:19:53 IST">
+      <class name="com.RMG.test.GetAllProject">
+        <test-method status="PASS" signature="configBS()[pri:0, instance:com.RMG.test.GetAllProject@e320068]" name="configBS" is-config="true" duration-ms="1421" started-at="2020-11-04T20:19:50 IST" finished-at="2020-11-04T20:19:51 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getAlluserTest -->
-      </class> <!-- com.Reqres.test.GetAllUser -->
+        </test-method> <!-- configBS -->
+        <test-method status="PASS" signature="getAllProjectTest()[pri:0, instance:com.RMG.test.GetAllProject@e320068]" name="getAllProjectTest" duration-ms="1527" started-at="2020-11-04T20:19:51 IST" finished-at="2020-11-04T20:19:53 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllProjectTest -->
+        <test-method status="PASS" signature="configAM(org.testng.ITestResult)[pri:0, instance:com.RMG.test.GetAllProject@e320068]" name="configAM" is-config="true" duration-ms="12" started-at="2020-11-04T20:19:53 IST" finished-at="2020-11-04T20:19:53 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=getAllProjectTest status=SUCCESS method=GetAllProject.getAllProjectTest()[pri:0, instance:com.RMG.test.GetAllProject@e320068] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method status="PASS" signature="configAS()[pri:0, instance:com.RMG.test.GetAllProject@e320068]" name="configAS" is-config="true" duration-ms="375" started-at="2020-11-04T20:19:53 IST" finished-at="2020-11-04T20:19:53 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAS -->
+      </class> <!-- com.RMG.test.GetAllProject -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

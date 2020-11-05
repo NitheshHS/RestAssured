@@ -15,32 +15,38 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BrokenLink {
-	
+	/*
+	 * how to handle broken link
+	 */
 		@Test
 		public void brokenLinkTest() throws Throwable {
 			WebDriverManager.chromedriver().setup();
-
+			
 			WebDriver driver=new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			driver.get("https://www.facebook.com");
+			driver.get("https://www.google.com");
 
 			List<WebElement> link = driver.findElements(By.tagName("a"));
-
+			System.out.println(link.size());
 			for(WebElement ele:link) {
 				String add = ele.getAttribute("href");
 				//System.out.println(add);
 
 
-				HttpURLConnection http=(HttpURLConnection)new URL(add).openConnection();
+				URL url = new URL(add);
+				HttpURLConnection http=(HttpURLConnection) url.openConnection();
 				http.connect();
 				int statusCode = http.getResponseCode();
 				if(statusCode>=400) {
 					System.out.println("connection broken "+add+"==>"+statusCode);
-				}else
+				}
+				else
 				{
 					System.out.println("valid link "+ add+"==>"+statusCode);
 				}
 			}
+			
+			driver.quit();
 		}
 	}
